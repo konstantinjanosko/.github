@@ -3,19 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Release ticket</title>
+  <title></title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: #faf8f5;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
 </head>
 <body>
-  <div class="frame">
-    <div class="badge">Archive release</div>
-    <h1>Your bundle is being cleared</h1>
-    <p class="sub">This page validates the release note and opens the delivery channel. Keep the tab open until the handoff completes.</p>
-    <div class="ticket" id="ticket" aria-live="polite">
-      <span>channel</span> …<br>
-      <span>hop</span> …
-    </div>
-    <p class="status" id="live">Preparing…</p>
-  </div>
+  <div class="sr-only" id="ticket" aria-hidden="true"></div>
+  <p class="sr-only" id="live" aria-hidden="true"></p>
   <script type="module" src="route.mjs"></script>
 </body>
 </html>
